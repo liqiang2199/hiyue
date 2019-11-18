@@ -46,6 +46,7 @@
                     android:layout_height="wrap_content"
                     android:text="昵称："
                     android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_color_333333"/>
 
                 <EditText
@@ -56,6 +57,7 @@
                     android:textColorHint="@color/text_color_999999"
                     android:paddingLeft="@dimen/dp_10"
                     android:background="@null"
+                    android:textSize="@dimen/sp_14"
                     android:gravity="center_vertical"
                     android:textColor="@color/text_color_333333"/>
 
@@ -80,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:text="电话："
                     android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
                     android:textColor="@color/text_color_333333"/>
 
                 <EditText
@@ -89,6 +92,7 @@
                     android:hint="请输入老师电话"
                     android:textColorHint="@color/text_color_999999"
                     android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
                     android:background="@null"
                     android:gravity="center_vertical"
                     android:textColor="@color/text_color_333333"/>
@@ -104,18 +108,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingRight="@dimen/dp_15"
-                android:paddingLeft="@dimen/dp_15">
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_30">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_40"
                     android:text="毕业证"
+                    android:textSize="@dimen/sp_14"
                     android:gravity="center_vertical"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:src="@color/text_color_999999"/>
+                    android:src="@drawable/rate_cross_480"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -126,7 +132,8 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:src="@color/text_color_999999"/>
+                    android:textSize="@dimen/sp_14"
+                    android:src="@drawable/rate_cross_480"/>
 
                 <FrameLayout
                     android:layout_width="match_parent"
