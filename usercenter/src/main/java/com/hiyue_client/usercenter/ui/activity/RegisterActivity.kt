@@ -38,32 +38,14 @@ class RegisterActivity : BaseMvpActivity<RegisterView, RegisterPersenter>(), Reg
         ActivityManager.getInstance().addChildActivity(this)
         btnSend.onClick {
             val phone = editPhone.text.toString().trim()
-
-            if (!Utils.isMobile(phone)) {
-                ToastUtil.Toast_ShortUtil(this, "请输入正确的手机号")
-                return@onClick
-            }
             getPresenter().sendSms(this, editPhone.text.toString())
         }
 
         btRegister.onClick {
             //注册
             val phone = editPhone.text.toString().trim()
-
-            if (!Utils.isMobile(phone)) {
-                ToastUtil.Toast_ShortUtil(this, "请输入正确的手机号")
-                return@onClick
-            }
             val etPass = editPass.text.toString().trim()
-            if (!etPass.isNoNullOrEmpty()) {
-                ToastUtil.Toast_ShortUtil(this, "请输入密码")
-                return@onClick
-            }
             val etVerCode = editVerCode.text.toString().trim()
-            if (!etVerCode.isNoNullOrEmpty()) {
-                ToastUtil.Toast_ShortUtil(this, "请输入验证码")
-                return@onClick
-            }
 
             getPresenter().userRegisterByMobileP(this, phone
                     , etPass, etVerCode)
