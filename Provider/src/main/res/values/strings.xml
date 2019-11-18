@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Provider</string>
+    <string name="edit_phone_forget">请输入您的注册手机号</string>
+    <string name="forget_pass">忘记密码</string>
+    <string name="re_pass">重置新密码</string>
+    <string name="edit_ver_code">填写验证码</string>
+    <string name="sure_edit_ver_code">确认验证码</string>
+    <string name="edit_ver_code_tip">请输入短信验证码</string>
+    <string name="re_set_forget_pass">请重置密码</string>
+    <string name="re_set_forget_new_pass">重置新密码</string>
+    <string name="sure_re_set_forget_pass">确认重置密码</string>
+
+    <string name="me_personal_info">基本信息</string>
+    <string name="me_teacher">我是老师</string>
+    <string name="me_teacher_base_info">认证信息</string>
+    <string name="me_set">设置</string>
+    <string name="me_integral">我的积分</string>
+</resources>

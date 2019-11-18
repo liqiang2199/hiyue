@@ -1,0 +1,61 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.library'
+}else {
+    apply plugin: 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        if (!isModule.toBoolean()) {
+            applicationId "com.hiyue.video_module"
+        }
+    }
+    sourceSets {
+        main {
+            //是Module就release，不是就可以单独运行debug
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'
+                }
+            } else {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        pickFirst 'META-INF/*'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/rxjava.properties'
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':libnetwork')
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0.4'
+}

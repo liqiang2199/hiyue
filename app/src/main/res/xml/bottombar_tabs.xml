@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--icon="@drawable/my_tab_icon"-->
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/tab_home_select"
+            title="首页"
+            barColorWhenSelected="#159FEC"/>
+        <tab
+            id="@+id/tab_music_score"
+            icon="@drawable/tab_home_select"
+            title="曲谱"
+            barColorWhenSelected="#159FEC"/>
+        <tab
+            id="@+id/tab_communication"
+            icon="@drawable/tab_home_select"
+            title="交流"
+            barColorWhenSelected="#159FEC"/>
+        <tab
+            id="@+id/tab_me"
+            icon="@drawable/tab_home_select"
+            title="我的"
+            barColorWhenSelected="#159FEC"/>
+    </tabs>

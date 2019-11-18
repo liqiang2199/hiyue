@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="edit_CommonVew">
+        <attr name="editHintText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="NavigationBarView">
+        <attr name="title" format="string"/>
+        <attr name="rightTitle" format="string"/>
+        <attr name="isGoneBack" format="boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.hiyue.provider.widget.NavCommonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/re_set_forget_new_pass">
+
+    </com.hiyue.provider.widget.NavCommonView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/re_set_forget_pass"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/text_color_333333"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_40"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_40">
+
+        <com.hiyue.provider.widget.EditCommonView
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editHintText="请输入新密码">
+
+        </com.hiyue.provider.widget.EditCommonView>
+
+        <com.hiyue.provider.widget.EditCommonView
+            android:id="@+id/editRePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_30"
+            app:editHintText="请再次输入密码">
+
+        </com.hiyue.provider.widget.EditCommonView>
+
+        <include
+            layout="@layout/include_common_but"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

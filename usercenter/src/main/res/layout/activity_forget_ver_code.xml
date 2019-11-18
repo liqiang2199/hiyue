@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.hiyue.provider.widget.NavCommonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/edit_ver_code">
+
+    </com.hiyue.provider.widget.NavCommonView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_ver_code_tip"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/text_color_333333"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_40"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40">
+
+        <com.hiyue_client.usercenter.widget.VerificationCodeEditText
+            android:id="@+id/editVerCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:inputType="number"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:bottomLineHeight="2dp"
+            app:figures="6"
+            app:verCodeMargin="@dimen/dp_10"
+            app:cursorWidth="2dp"
+            app:bottomLineNormalColor="@color/text_color_333333"
+            app:bottomLineSelectedColor="@color/text_color_333333"
+            app:selectedBackgroundColor="@color/white"
+            app:cursorColor="@color/text_color_333333"/>
+
+        <include
+            layout="@layout/include_common_but"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvYzm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取验证码"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/but_color_159FEC"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_15"/>
+
+</LinearLayout>
